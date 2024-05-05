@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cv_template/config/config.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class PersonQuoteContact extends StatelessWidget {
@@ -14,7 +14,7 @@ class PersonQuoteContact extends StatelessWidget {
         color: Theme.of(context).colorScheme.secondaryContainer,
       ),
       height: 244,
-      padding: EdgeInsets.fromLTRB(28, 34, 28, 34),
+      padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -33,14 +33,14 @@ class PersonQuoteContact extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 12,
-                    child: Icon(
+                    backgroundColor:
+                        Theme.of(context).colorScheme.tertiaryContainer,
+                    child: const Icon(
                       Icons.phone,
                       size: 17,
                     ),
-                    backgroundColor:
-                        Theme.of(context).colorScheme.tertiaryContainer,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   SelectionArea(
@@ -52,7 +52,7 @@ class PersonQuoteContact extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Row(
@@ -60,14 +60,14 @@ class PersonQuoteContact extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 12,
-                    child: Icon(
+                    backgroundColor:
+                        Theme.of(context).colorScheme.tertiaryContainer,
+                    child: const Icon(
                       Icons.mail,
                       size: 17,
                     ),
-                    backgroundColor:
-                        Theme.of(context).colorScheme.tertiaryContainer,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   SelectionArea(
@@ -79,7 +79,7 @@ class PersonQuoteContact extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Row(
@@ -87,19 +87,19 @@ class PersonQuoteContact extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 12,
-                    child: Icon(
+                    backgroundColor:
+                        Theme.of(context).colorScheme.tertiaryContainer,
+                    child: const Icon(
                       Icons.home,
                       size: 17,
                     ),
-                    backgroundColor:
-                        Theme.of(context).colorScheme.tertiaryContainer,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   SelectionArea(
                     child: Text(
-                      "${personalData.address.city}",
+                      personalData.address.city,
                       overflow: TextOverflow.fade,
                       style: Theme.of(context).textTheme.labelLarge,
                     ),

@@ -1,17 +1,10 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cv_template/config/config.dart';
-import 'package:cv_template/domain/education_entry.dart';
-import 'package:cv_template/screens/data_law_screen.dart';
-import 'package:cv_template/screens/impressum_screen.dart';
 
 import 'package:cv_template/widgets/person_edu_work.dart';
 import 'package:cv_template/widgets/person_quote_contact.dart';
 import 'package:cv_template/widgets/person_skills_lang.dart';
 
-import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:screenshot/screenshot.dart';
 import 'package:syntax_highlight/syntax_highlight.dart';
@@ -32,7 +25,7 @@ class MainScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(70.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,25 +36,25 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 200),
+              const SizedBox(height: 200),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(
+                  const Expanded(
                       child: Padding(
                           padding: EdgeInsets.all(70),
                           child: PersonSkillsLang())),
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
                   Expanded(
                     child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           borderRadius:
                               BorderRadius.only(topLeft: Radius.circular(24)),
                           color: Color(0xffe4e5f4),
                         ),
-                        child: Padding(
+                        child: const Padding(
                             padding: EdgeInsets.all(70.0),
                             child: PersonEducationWork())),
                   ),
@@ -88,7 +81,8 @@ class PersonalImageAndName extends StatelessWidget {
           child: CircleAvatar(
             radius: 120,
             backgroundColor: Theme.of(context).colorScheme.tertiary,
-            backgroundImage: AssetImage('assets/images/profile_picture.jpeg'),
+            backgroundImage:
+                const AssetImage('assets/images/profile_picture.jpeg'),
           ),
         ),
         const SizedBox(

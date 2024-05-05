@@ -1,5 +1,4 @@
 import 'package:cv_template/config/config.dart';
-import 'package:cv_template/domain/personal_data.dart';
 import 'package:flutter/material.dart';
 
 class ImpressumScreen extends StatelessWidget {
@@ -17,85 +16,70 @@ class ImpressumScreen extends StatelessWidget {
         ),
         title: Text(
           "Impressum",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Theme.of(context).colorScheme.primaryContainer,
-            fontSize: Theme.of(context).textTheme.headlineLarge!.fontSize,
-          ),
+          style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Verantwortlicher",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primaryContainer,
-                fontSize: Theme.of(context).textTheme.headlineMedium!.fontSize,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(60),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Verantwortlicher",
+                style: Theme.of(context).textTheme.titleMedium,
               ),
-            ),
-            Text(
-              "Angaben gemäß §5 TMG",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primaryContainer,
-                fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
+              Text(
+                "Angaben gemäß §5 TMG",
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              "${personalData.firstName} ${personalData.lastName}",
-            ),
-            Text(
-                "${personalData.address.street}, ${personalData.address.zip} ${personalData.address.city}"),
-            Text(
-              "Vertreten durch",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primaryContainer,
-                fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
+              Text(
+                style: Theme.of(context).textTheme.bodySmall,
+                "${personalData.firstName} ${personalData.lastName}",
               ),
-            ),
-            Text(
-              "${personalData.firstName} ${personalData.lastName}",
-            ),
-            Text(
-              "Kontakt",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primaryContainer,
-                fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
+              Text(
+                  style: Theme.of(context).textTheme.bodySmall,
+                  "${personalData.address.street}, ${personalData.address.zip} ${personalData.address.city}"),
+              Text(
+                "Vertreten durch",
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
-            ),
-            Text("Telefon: ${personalData.phone}"),
-            Text("Email: ${personalData.email}"),
-            Text(
-              "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primaryContainer,
-                fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
+              Text(
+                style: Theme.of(context).textTheme.bodySmall,
+                "${personalData.firstName} ${personalData.lastName}",
               ),
-            ),
-            Text(
-              "${personalData.firstName} ${personalData.lastName}",
-            ),
-            Text(
-                "${personalData.address.street}, ${personalData.address.zip} ${personalData.address.city}"),
-            Text(
-              "Streitschlichtung",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primaryContainer,
-                fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
+              Text(
+                "Kontakt",
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
-            ),
-            const Text(
-                "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr Unsere E-Mail-Adresse finden Sie oben im Impressum.")
-          ],
+              Text(
+                "Telefon: ${personalData.phone}",
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              Text(
+                "Email: ${personalData.email}",
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              Text(
+                "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              Text(
+                style: Theme.of(context).textTheme.bodySmall,
+                "${personalData.firstName} ${personalData.lastName}",
+              ),
+              Text(
+                  style: Theme.of(context).textTheme.bodySmall,
+                  "${personalData.address.street}, ${personalData.address.zip} ${personalData.address.city}"),
+              Text(
+                "Streitschlichtung",
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              Text(
+                  style: Theme.of(context).textTheme.bodySmall,
+                  "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr Unsere E-Mail-Adresse finden Sie oben im Impressum.")
+            ],
+          ),
         ),
       ),
     );

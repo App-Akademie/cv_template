@@ -1,7 +1,7 @@
 import 'package:cv_template/config/config.dart';
-import 'package:cv_template/screens/main_screen.dart';
+
 import 'package:cv_template/widgets/footer.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
@@ -21,7 +21,7 @@ class PersonSkillsLang extends StatelessWidget {
             color: Theme.of(context).colorScheme.secondaryContainer,
           ),
           width: 280,
-          padding: EdgeInsets.fromLTRB(28, 34, 28, 34),
+          padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -30,7 +30,7 @@ class PersonSkillsLang extends StatelessWidget {
                 size: 40,
                 color: Theme.of(context).colorScheme.tertiary,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               SelectionArea(
@@ -43,10 +43,10 @@ class PersonSkillsLang extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
-        Container(
+        SizedBox(
           height: 600,
           child: ListView.builder(
             itemCount: skills.length,
@@ -58,7 +58,7 @@ class PersonSkillsLang extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SvgPicture.asset("assets/svg/flutter.svg"),
-                      SizedBox(
+                      const SizedBox(
                         width: 16,
                       ),
                       SelectionArea(
@@ -101,7 +101,7 @@ class PersonSkillsLang extends StatelessWidget {
             color: Theme.of(context).colorScheme.secondaryContainer,
           ),
           width: 280,
-          padding: EdgeInsets.fromLTRB(28, 34, 28, 34),
+          padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -110,7 +110,7 @@ class PersonSkillsLang extends StatelessWidget {
                 size: 40,
                 color: Theme.of(context).colorScheme.tertiary,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               SelectionArea(
@@ -123,10 +123,10 @@ class PersonSkillsLang extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
-        Container(
+        SizedBox(
           height: 600,
           child: Row(
             children: [
@@ -157,7 +157,7 @@ class PersonSkillsLang extends StatelessWidget {
                               itemCount: 5,
                               itemSize: 30,
                               itemPadding:
-                                  EdgeInsets.symmetric(horizontal: 4.0),
+                                  const EdgeInsets.symmetric(horizontal: 4.0),
                               itemBuilder: (context, _) => Container(
                                 width:
                                     30.0, // Adjust the size of the circle here
@@ -168,9 +168,7 @@ class PersonSkillsLang extends StatelessWidget {
                                   shape: BoxShape.circle,
                                 ),
                               ),
-                              onRatingUpdate: (rating) {
-                                print(rating);
-                              },
+                              onRatingUpdate: (rating) {},
                             ),
                             Container(
                               decoration: BoxDecoration(
@@ -178,7 +176,7 @@ class PersonSkillsLang extends StatelessWidget {
                                       .colorScheme
                                       .primaryContainer,
                                   borderRadius: BorderRadius.circular(30)),
-                              padding: EdgeInsets.fromLTRB(14, 6, 14, 6),
+                              padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
                               child: SelectionArea(
                                 child: Text(
                                   languages[index].skillLevel,
@@ -200,7 +198,7 @@ class PersonSkillsLang extends StatelessWidget {
             ],
           ),
         ),
-        Footer()
+        const Footer()
       ],
     );
   }

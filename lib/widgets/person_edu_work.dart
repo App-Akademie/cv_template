@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cv_template/config/config.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:timelines/timelines.dart';
@@ -20,7 +20,7 @@ class PersonEducationWork extends StatelessWidget {
             color: Color.fromRGBO(27, 27, 27, 0.1),
           ),
           width: 280,
-          padding: EdgeInsets.fromLTRB(28, 34, 28, 34),
+          padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -29,7 +29,7 @@ class PersonEducationWork extends StatelessWidget {
                 size: 40,
                 color: Theme.of(context).colorScheme.primary,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               SelectionArea(
@@ -45,10 +45,10 @@ class PersonEducationWork extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
-        Container(
+        SizedBox(
           height: 600,
           child: FixedTimeline.tileBuilder(
             theme: TimelineTheme.of(context).copyWith(
@@ -81,7 +81,7 @@ class PersonEducationWork extends StatelessWidget {
             color: Color.fromRGBO(27, 27, 27, 0.1),
           ),
           width: 370,
-          padding: EdgeInsets.fromLTRB(28, 34, 28, 34),
+          padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -90,7 +90,7 @@ class PersonEducationWork extends StatelessWidget {
                 size: 40,
                 color: Theme.of(context).colorScheme.primary,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               SelectionArea(
@@ -105,33 +105,31 @@ class PersonEducationWork extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
-        Container(
-          child: FixedTimeline.tileBuilder(
-            theme: TimelineTheme.of(context).copyWith(
-              nodePosition: 0,
-            ),
-            builder: TimelineTileBuilder.connected(
-              indicatorBuilder: (context, index) {
-                return buildIndicator(context, work);
-              },
-              connectorBuilder: (_, index, type) {
-                return const SolidLineConnector(
-                  color: Color.fromRGBO(114, 120, 208, 0.4),
-                  thickness: 5,
-                );
-              },
-              contentsAlign: ContentsAlign.basic,
-              contentsBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: buildEntryWork(context, work[index]),
-                );
-              },
-              itemCount: work.length,
-            ),
+        FixedTimeline.tileBuilder(
+          theme: TimelineTheme.of(context).copyWith(
+            nodePosition: 0,
+          ),
+          builder: TimelineTileBuilder.connected(
+            indicatorBuilder: (context, index) {
+              return buildIndicator(context, work);
+            },
+            connectorBuilder: (_, index, type) {
+              return const SolidLineConnector(
+                color: Color.fromRGBO(114, 120, 208, 0.4),
+                thickness: 5,
+              );
+            },
+            contentsAlign: ContentsAlign.basic,
+            contentsBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: buildEntryWork(context, work[index]),
+              );
+            },
+            itemCount: work.length,
           ),
         ),
       ],
@@ -143,14 +141,14 @@ class PersonEducationWork extends StatelessWidget {
     dynamic entry,
   ) {
     if (entry.runtimeType == String) {
-      return ContainerIndicator(
+      return const ContainerIndicator(
         size: 48,
         child: Center(
           child: FaIcon(FontAwesomeIcons.graduationCap),
         ),
       );
     } else {
-      return ContainerIndicator(
+      return const ContainerIndicator(
           size: 48,
           child: Center(
             child: Icon(
@@ -170,7 +168,7 @@ class PersonEducationWork extends StatelessWidget {
           decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primaryContainer,
               borderRadius: BorderRadius.circular(30)),
-          padding: EdgeInsets.fromLTRB(14, 6, 14, 6),
+          padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
           child: SelectionArea(
             child: Text(
               '${edus.fromDate.year} - ${edus.toDate.year}',
@@ -205,7 +203,7 @@ class PersonEducationWork extends StatelessWidget {
           decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(30)),
-          padding: EdgeInsets.fromLTRB(14, 6, 14, 6),
+          padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
           child: SelectionArea(
             child: Text(
               '${work.fromDate.year} - ${work.toDate.year}',
