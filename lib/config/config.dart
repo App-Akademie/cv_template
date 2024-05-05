@@ -61,14 +61,17 @@ final skills = [
   const SkillEntry(
     name: "Flart",
     rating: 5,
+    imgPath: "assets/svg/flutter.svg",
   ),
   const SkillEntry(
-    name: "Putter",
+    name: "Dotlin",
     rating: 5,
+    imgPath: "assets/svg/kotlin.svg",
   ),
   const SkillEntry(
     name: "Dython",
     rating: 3,
+    imgPath: "assets/svg/python.svg",
   ),
 ];
 

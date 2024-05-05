@@ -57,7 +57,7 @@ class PersonSkillsLang extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SvgPicture.asset("assets/svg/flutter.svg"),
+                      SvgPicture.asset(skills[index].imgPath),
                       const SizedBox(
                         width: 16,
                       ),
@@ -78,8 +78,9 @@ class PersonSkillsLang extends StatelessWidget {
                       thumbShape:
                           const RoundSliderThumbShape(enabledThumbRadius: 0),
                       trackHeight: 6,
-                      activeTrackColor: Color(0xfff2f2fA),
-                      inactiveTrackColor: Color.fromRGBO(114, 120, 208, 0.4),
+                      activeTrackColor: const Color(0xfff2f2fA),
+                      inactiveTrackColor:
+                          const Color.fromRGBO(114, 120, 208, 0.4),
                     ),
                     child: Slider(
                       value: skills[index].rating.toDouble(),
@@ -150,7 +151,8 @@ class PersonSkillsLang extends StatelessWidget {
                             ),
                             RatingBar.builder(
                               updateOnDrag: false,
-                              unratedColor: Color.fromRGBO(114, 120, 208, 0.4),
+                              unratedColor:
+                                  const Color.fromRGBO(114, 120, 208, 0.4),
                               initialRating: languages[index].rating.toDouble(),
                               minRating: 1,
                               direction: Axis.horizontal,
@@ -159,11 +161,9 @@ class PersonSkillsLang extends StatelessWidget {
                               itemPadding:
                                   const EdgeInsets.symmetric(horizontal: 4.0),
                               itemBuilder: (context, _) => Container(
-                                width:
-                                    30.0, // Adjust the size of the circle here
-                                height:
-                                    30.0, // Adjust the size of the circle here
-                                decoration: BoxDecoration(
+                                width: 30.0,
+                                height: 30.0,
+                                decoration: const BoxDecoration(
                                   color: Color.fromRGBO(242, 242, 250, 1),
                                   shape: BoxShape.circle,
                                 ),
@@ -183,7 +183,7 @@ class PersonSkillsLang extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .labelSmall!
-                                      .copyWith(color: Color(0xFF383B5E)),
+                                      .copyWith(color: const Color(0xFF383B5E)),
                                 ),
                               ),
                             ),

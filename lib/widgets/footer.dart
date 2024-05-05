@@ -10,12 +10,12 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
+      children: [
         TextButton(
           onPressed: () => Navigator.push(context,
               MaterialPageRoute(builder: (context) => const ImpressumScreen())),
           child: Text(
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.labelMedium,
             "Impressum",
           ),
         ),
@@ -23,7 +23,7 @@ class Footer extends StatelessWidget {
           onPressed: () => Navigator.push(context,
               MaterialPageRoute(builder: (context) => const DataLawScreen())),
           child: Text(
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.labelMedium,
             "Datenschutzerklärung",
           ),
         ),

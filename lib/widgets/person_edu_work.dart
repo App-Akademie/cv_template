@@ -17,7 +17,7 @@ class PersonEducationWork extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: Color.fromRGBO(27, 27, 27, 0.1),
+            color: const Color.fromRGBO(27, 27, 27, 0.1),
           ),
           width: 280,
           padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
@@ -78,7 +78,7 @@ class PersonEducationWork extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: Color.fromRGBO(27, 27, 27, 0.1),
+            color: const Color.fromRGBO(27, 27, 27, 0.1),
           ),
           width: 370,
           padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
