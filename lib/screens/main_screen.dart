@@ -19,10 +19,10 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Screenshot(
-      controller: screenshotController,
-      child: Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
+      double availableWidth = constraints.maxWidth;
+      if (availableWidth >= 1400) {
+        return SingleChildScrollView(
           child: Column(
             children: [
               const Padding(
@@ -62,9 +62,65 @@ class MainScreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
+        );
+      } else if (availableWidth >= 700) {
+        return SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(70),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                PersonalImageAndName(),
+                SizedBox(height: 100),
+                PersonQuoteContact(),
+                SizedBox(height: 100),
+                Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(24)),
+                      color: Color(0xffe4e5f4),
+                    ),
+                    child: const Padding(
+                        padding: EdgeInsets.all(70.0),
+                        child: PersonEducationWork())),
+                SizedBox(height: 100),
+                PersonSkillsLang(),
+
+                /* 
+              const SizedBox(height: 200),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Expanded(
+                      child: Padding(
+                          padding: EdgeInsets.all(70),
+                          child: PersonSkillsLang())),
+                  const SizedBox(
+                    width: 100,
+                  ),
+                  Expanded(
+                    child: Container(
+                        decoration: const BoxDecoration(
+                          borderRadius:
+                              BorderRadius.only(topLeft: Radius.circular(24)),
+                          color: Color(0xffe4e5f4),
+                        ),
+                        child: const Padding(
+                            padding: EdgeInsets.all(70.0),
+                            child: PersonEducationWork())),
+                  ),
+                ],
+              ),*/
+              ],
+            ),
+          ),
+        );
+      } else {
+        return Center(
+            child: CircularProgressIndicator(
+          color: Theme.of(context).colorScheme.secondary,
+        ));
+      }
+    }));
   }
 }
 
