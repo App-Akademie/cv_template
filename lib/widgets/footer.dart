@@ -1,6 +1,3 @@
-import 'package:cv_template/screens/data_law_screen.dart';
-import 'package:cv_template/screens/impressum_screen.dart';
-
 import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {
@@ -12,16 +9,14 @@ class Footer extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextButton(
-          onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const ImpressumScreen())),
+          onPressed: () => Navigator.pushNamed(context, "/imprint"),
           child: Text(
             style: Theme.of(context).textTheme.labelMedium,
             "Impressum",
           ),
         ),
         TextButton(
-          onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const DataLawScreen())),
+          onPressed: () => Navigator.pushNamed(context, "/data"),
           child: Text(
             style: Theme.of(context).textTheme.labelMedium,
             "Datenschutzerklärung",

@@ -12,6 +12,8 @@ Die Icons der Programmiersprachen können im Ordner [assert/svg/](assets/svg/) v
 
 Das Favicon (Website Icon) kann mit diesem [Tutorial](https://samiaashraf.medium.com/how-to-add-favicon-to-a-flutter-web-app-fe719a1d5a34) verändert werden.
 
+Das CV kann im Ordner  [assets/cv/](/assets/cv/) verändert werden. Je nach Dateiname, muss der Pfad im der Klasse [PDFScreen](/lib/screens/pdf_screen.dart) angepasst werden.
+
 ## Deployment über Firebase
 
 Das Deployment der Website über Firebase kann mithilfe der [Firebase CLI](https://firebaseopensource.com/projects/firebase/firebase-tools/). Starte zunächst ein neues Projekt auf Firebase.

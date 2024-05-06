@@ -18,12 +18,13 @@ dependencies:
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
   google_fonts: ^6.2.1
-  pdf: ^3.10.8
-  responsive_framework: ^1.4.0
+  html: ^0.15.4
+
   screenshot: ^2.3.0
+  syncfusion_flutter_pdfviewer: ^25.1.42
   syntax_highlight: ^0.4.0
   timelines: ^0.1.0
-  universal_html: ^2.2.4
+
 
 dev_dependencies:
   flutter_test:
@@ -35,3 +36,4 @@ flutter:
   assets:
     - assets/images/
     - assets/svg/
+    - assets/cv/

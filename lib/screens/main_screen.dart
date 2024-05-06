@@ -6,16 +6,13 @@ import 'package:cv_template/widgets/person_skills_lang.dart';
 
 import 'package:flutter/material.dart';
 
-import 'package:screenshot/screenshot.dart';
 import 'package:syntax_highlight/syntax_highlight.dart';
 
 class MainScreen extends StatelessWidget {
-  MainScreen({super.key, required this.theme});
+  const MainScreen({super.key, required this.theme});
 
   static const routeName = '/MainScreen';
   final HighlighterTheme theme;
-
-  final screenshotController = ScreenshotController();
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +96,11 @@ class MainScreen extends StatelessWidget {
           }
         },
       ),
+      floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.picture_as_pdf),
+          onPressed: () {
+            Navigator.pushNamed(context, "/pdfview");
+          }),
     );
   }
 }
