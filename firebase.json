@@ -12,7 +12,7 @@
     }
   },
   "hosting": {
-    "source": ".",
+    "source": "hosting",
     "ignore": [
       "firebase.json",
       "**/.*",

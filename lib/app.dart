@@ -1,7 +1,6 @@
 import 'package:cv_template/config/theme.dart';
 import 'package:cv_template/screens/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 import 'package:syntax_highlight/syntax_highlight.dart';
 

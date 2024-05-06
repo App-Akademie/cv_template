@@ -4,20 +4,6 @@ import 'package:cv_template/domain/personal_data.dart';
 import 'package:cv_template/domain/skill_entry.dart';
 import 'package:cv_template/domain/work_entry.dart';
 
-final List<dynamic> personEntries = [
-  "Education",
-  ...edus,
-  "Skills",
-  ...skills,
-  "Languages",
-  ...languages,
-];
-
-final List<dynamic> workEntries = [
-  "Work Experience",
-  ...work,
-];
-
 final edus = [
   EducationEntry(
     fromDate: DateTime(2014, 9),
