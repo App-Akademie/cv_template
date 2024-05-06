@@ -1,4 +1,4 @@
-# cv_template
+# AppAkademie CV-Template
 
 Ein Lebenslauf, in Flutter erstellt.
 
@@ -9,6 +9,8 @@ Die Punkte des Lebenslaufes müssen in die [Config-Datei](lib/config/config.dart
 Das Avatar-Bild muss in den üblichen Ordner für Assets in Flutter gelegt werden ([assets/images/](assets/images/)) und `profile_picture.jpeg` heißen.
 
 Die Icons der Programmiersprachen können im Ordner [assert/svg/](assets/svg/) verändert werden.
+
+Das Favicon (Website Icon) kann mit diesem [Tutorial](https://samiaashraf.medium.com/how-to-add-favicon-to-a-flutter-web-app-fe719a1d5a34) verändert werden.
 
 ## Deployment über Firebase
 
