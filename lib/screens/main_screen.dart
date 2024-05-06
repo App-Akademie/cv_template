@@ -5,6 +5,7 @@ import 'package:cv_template/widgets/person_quote_contact.dart';
 import 'package:cv_template/widgets/person_skills_lang.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:syntax_highlight/syntax_highlight.dart';
 
@@ -97,7 +98,10 @@ class MainScreen extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.picture_as_pdf),
+          child: SvgPicture.asset(
+            "assets/svg/pdf.svg",
+            color: Theme.of(context).colorScheme.primary,
+          ),
           onPressed: () {
             Navigator.pushNamed(context, "/pdfview");
           }),

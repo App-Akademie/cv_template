@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cv_template/config/config.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:timelines/timelines.dart';
 
@@ -24,11 +25,7 @@ class PersonEducationWork extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                FontAwesomeIcons.graduationCap,
-                size: 40,
-                color: Theme.of(context).colorScheme.primary,
-              ),
+              SvgPicture.asset("assets/svg/edu.svg"),
               const SizedBox(
                 width: 15,
               ),
@@ -80,16 +77,12 @@ class PersonEducationWork extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             color: const Color.fromRGBO(27, 27, 27, 0.1),
           ),
-          width: 370,
+          width: 380,
           padding: const EdgeInsets.fromLTRB(28, 34, 28, 34),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                Icons.computer,
-                size: 40,
-                color: Theme.of(context).colorScheme.primary,
-              ),
+              SvgPicture.asset("assets/svg/work.svg"),
               const SizedBox(
                 width: 15,
               ),

@@ -17,7 +17,7 @@ class App extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => MainScreen(theme: theme),
-        "/pdfview": (context) => const PDFSCreen(),
+        "/pdfview": (context) => const PDFScreen(),
         "/imprint": (context) => const ImpressumScreen(),
         "/data": (context) => const DataLawScreen(),
       },

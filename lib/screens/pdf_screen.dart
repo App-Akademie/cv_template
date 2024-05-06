@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class PDFSCreen extends StatelessWidget {
-  const PDFSCreen({super.key});
+class PDFScreen extends StatelessWidget {
+  const PDFScreen({super.key});
 
   static const routeName = '/pdfview';
 

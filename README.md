@@ -55,3 +55,4 @@ In den Firebase Hosting Einstellungen kann die Domain von dir dann weiter konfig
 - [x] Rework Warnings
 - [ ] Add Projects Tab
 - [ ] Add Light Theme
+- [ ] Add Github Pages Deployment

@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cv_template/config/config.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PersonQuoteContact extends StatelessWidget {
   const PersonQuoteContact({super.key});
@@ -31,15 +32,7 @@ class PersonQuoteContact extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CircleAvatar(
-                    radius: 12,
-                    backgroundColor:
-                        Theme.of(context).colorScheme.tertiaryContainer,
-                    child: const Icon(
-                      Icons.phone,
-                      size: 17,
-                    ),
-                  ),
+                  SvgPicture.asset("assets/svg/phone.svg"),
                   const SizedBox(
                     width: 5,
                   ),
@@ -58,15 +51,7 @@ class PersonQuoteContact extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CircleAvatar(
-                    radius: 12,
-                    backgroundColor:
-                        Theme.of(context).colorScheme.tertiaryContainer,
-                    child: const Icon(
-                      Icons.mail,
-                      size: 17,
-                    ),
-                  ),
+                  SvgPicture.asset("assets/svg/mail.svg"),
                   const SizedBox(
                     width: 5,
                   ),
@@ -85,15 +70,7 @@ class PersonQuoteContact extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CircleAvatar(
-                    radius: 12,
-                    backgroundColor:
-                        Theme.of(context).colorScheme.tertiaryContainer,
-                    child: const Icon(
-                      Icons.home,
-                      size: 17,
-                    ),
-                  ),
+                  SvgPicture.asset("assets/svg/home.svg"),
                   const SizedBox(
                     width: 5,
                   ),

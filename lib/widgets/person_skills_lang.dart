@@ -25,11 +25,7 @@ class PersonSkillsLang extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                Icons.code,
-                size: 40,
-                color: Theme.of(context).colorScheme.tertiary,
-              ),
+              SvgPicture.asset("assets/svg/code.svg"),
               const SizedBox(
                 width: 15,
               ),
@@ -106,11 +102,7 @@ class PersonSkillsLang extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                Icons.chat_bubble_sharp,
-                size: 40,
-                color: Theme.of(context).colorScheme.tertiary,
-              ),
+              SvgPicture.asset("assets/svg/lang.svg"),
               const SizedBox(
                 width: 15,
               ),
