@@ -15,13 +15,13 @@ final edus = [
     fromDate: DateTime(2018, 9),
     toDate: DateTime(2020, 7),
     degree: "Master of Science",
-    university: "University of Berlin",
+    university: "University of Düsseldorf",
   ),
   EducationEntry(
     fromDate: DateTime(2018, 9),
     toDate: DateTime(2020, 7),
     degree: "PhD",
-    university: "University of Berlin",
+    university: "University of Hamburg",
   ),
 ];
 

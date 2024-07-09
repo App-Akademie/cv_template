@@ -48,6 +48,18 @@ Dieser Befehl sollte immer dann ausgeführt werden, wenn du eine neue Version de
 
 In den Firebase Hosting Einstellungen kann die Domain von dir dann weiter konfiguriert werden.
 
+## Manuelles Deployment über Netlify
+
+1. Projekt bauen
+
+```
+flutter build web
+```
+
+2. Den Ordner im Projekt unter dem Verzeichnis "build/web/" kopieren und bei Netlify unter "Deploy Manually" hinzufügen
+
+![alt text](image.png)
+
 ## To-Do
 
 - [x] Add Responsiveness
