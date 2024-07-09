@@ -63,7 +63,7 @@ class MainScreen extends StatelessWidget {
                 ],
               ),
             );
-          } else if (availableWidth >= 700) {
+          } else if (availableWidth >= 750) {
             return SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(70),
